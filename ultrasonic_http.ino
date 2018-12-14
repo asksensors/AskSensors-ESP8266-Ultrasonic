@@ -1,8 +1,7 @@
 /*
- * askSensors HTTP Request
  * Description: Distance measurement using ultrasonic HC-SR04 and ESP8266 connected to AskSensors
  *  Author: https://asksensors.com, 2018
- *  github: 
+ *  github: https://github.com/asksensors
  */
 
 #include <Arduino.h>
