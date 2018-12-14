@@ -28,7 +28,7 @@ void setup() {
 
   Serial.begin(115200);
   Serial.println("*****************************************************");
-  Serial.println("********** Program Start : Connect ESP8266 to AskSensors over HTTP");
+  Serial.println("********** Program Start : Connect Ultrasonic HC-SR04 + ESP8266 to AskSensors over HTTP");
   Serial.println("Wait for WiFi... ");
   Serial.print("********** connecting to WIFI : ");
   Serial.println(wifi_ssid);
