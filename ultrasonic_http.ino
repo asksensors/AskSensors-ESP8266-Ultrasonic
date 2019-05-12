@@ -1,6 +1,6 @@
 /*
  * Description: Distance measurement using ultrasonic HC-SR04 and ESP8266 connected to AskSensors
- *  Author: https://asksensors.com, 2018
+ *  Author: https://asksensors.com, 2018 - 2019
  *  github: https://github.com/asksensors
  */
 
@@ -17,9 +17,10 @@
 const char* wifi_ssid = "....................";             // SSID
 const char* wifi_password = "....................";         // WIFI
 const char* apiKeyIn = "..................";      // API KEY IN
+const unsigned int writeInterval = 25000; // write interval (in ms)
 
 // ASKSENSORS config.
-String host = "http://asksensors.com";         // ASKSENSORS host name
+String host = "http://api.asksensors.com";         // ASKSENSORS host name
 
 ESP8266WiFiMulti WiFiMulti;
 
@@ -72,7 +73,7 @@ void loop() {
         // Create a URL for the request
         String url = "";
         url += host;
-        url += "/api.asksensors/write/";
+        url += "/write/";
         url += apiKeyIn;
         url += "?module1=";
         url += distance;
@@ -107,5 +108,5 @@ void loop() {
         Serial.println("*****************************************************");
     }
 
-    delay(25000);
+    delay(writeInterval);
 }
